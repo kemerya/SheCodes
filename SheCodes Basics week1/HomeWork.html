@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f5f5f5;
+        padding: 20px;
+        margin: 0;
+      }
+      div {
+        margin: 10px auto;
+      }
+      h1 {
+        font-size: 24px;
+        margin: 10px auto;
+        color: #885df1;
+      }
+      .forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .forecast > div {
+        margin: 10px 0;
+        transition: all 200ms ease-in-out;
+      }
+      .forecast .temperature {
+        font-size: 20px;
+      }
+      .temperature1 {
+        font-size: 40px;
+        font-weight: normal;
+      }
+      .temperature1 span {
+        font-weight: bold;
+      }
+      .forecast .day {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .sun {
+        color: #ffd700;
+        font-size: 30px;
+      }
+      .hov {
+        transition: all 200ms ease-in-out;
+      }
+      .hov:hover {
+        background-color: #ffe8e8;
+        padding: 10px 100px;
+        margin: 20px auto;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button {
+        background-color: #885df1;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 40px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background-color: red;
+      }
+      .credit {
+        margin-top: 20px;
+        color: #666;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sun">🌤️</div>
+    <h1>Currently 21&deg; in Tokyo</h1>
+    <div class="temperature1">13&deg;<span>/23&deg;</span></div>
+    <div class="forecast">
+      <div class="hov">
+        <div class="cloud">🌧️<span class="day">Tomorrow</span></div>
+        <div class="temperature">10&deg;/22&deg;</div>
+      </div>
+      <div class="hov">
+        <div class="rain">🌥️<span class="day">Saturday</span></div>
+        <div class="temperature">15&deg;/17&deg;</div>
+      </div>
+      <div class="hov">
+        <div class="sunrise">☀️ <span class="day">Sunday</span></div>
+        <div class="temperature">25&deg;/28&deg;</div>
+      </div>
+    </div>
+    <button>Change city</button>
+    <div class="credit">Coded by Kemerya Zeynu</div>
+  </body>
+</html>
