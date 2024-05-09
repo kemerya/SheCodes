@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chocolate 🍫</title>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rgb(15, 15, 15);
+        color: white;
+        margin: 30px;
+      }
+      .container {
+        color: white;
+        margin: 30px;
+        max-width: 700px;
+        margin: 0 auto;
+        border: 1px solid white;
+        box-shadow: inset;
+        border-radius: 6px;
+      }
+      h1 {
+        font-weight: bolder;
+        line-height: 1.5;
+        border: 1px solid white;
+        text-align: center;
+        border-radius: 4px;
+        padding: 20px;
+        margin: 20px 0;
+      }
+      h2 {
+        text-align: center;
+        line-height: 1.5;
+      }
+      img {
+        display: block;
+        margin: 0 auto;
+        max-width: 100%;
+        height: auto;
+        border-radius: 10px;
+      }
+      p {
+        text-align: center;
+        font-size: large;
+        line-height: 1.5;
+      }
+      span {
+        font-size: large;
+      }
+      .this-page {
+        display: block;
+        text-decoration: none;
+        text-align: center;
+      }
+      .this-page:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      a {
+        text-decoration: none;
+        text-align: center;
+        color: blueviolet;
+      }
+      a:hover {
+        cursor: pointer;
+        text-decoration: underline;
+      }
+      button {
+        display: block;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        border: 1px solid white;
+        padding: 20px 50px;
+        border-radius: 4px;
+        background-color: rgb(4, 121, 121);
+        color: white;
+        font-size: larger;
+        box-shadow: rgba(0, 0, 0, 0.3);
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        opacity: 0.8;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <button id="themeButton">Change Theme</button>
+      <h1>I love Chocolate😍</h1>
+      <h2>Common Chocolate Types and Varieties</h2>
+      <hr />
+      <img
+        src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/122/269/original/chocolate.jpg?1712488934"
+        alt="chocolate"
+      />
+      <hr />
+      <p>
+        <span><strong>Chocolate</strong></span> may be a familiar food and a
+        common ingredient, but the word "chocolate" can mean a variety of
+        different things. One simple word encompasses everything from smooth,
+        sweet white chocolate to the darkest bittersweet chocolate, and
+        everything in between. So what is chocolate, where does it come from,
+        and what do all of the chocolate varieties mean?
+      </p>
+      <a
+        href="https://www.thespruceeats.com/a-guide-to-chocolate-varieties-520311"
+        target="_blank"
+        >Learn more on SpruceEats</a
+      >
+      <br />
+      <button>👉 Buy Chocolate</button>
+      <a
+        href="https://kemerya.github.io/kemeryaZeynusResume/"
+        class="this-page"
+        target="_blank"
+        >This page is built by Kemerya Zeynu</a
+      >
+    </div>
+
+    <script>
+      function buy_chocolate() {
+        let name = prompt("What is your name");
+        if (!name || name.trim() === "") {
+          alert("You can't get chocolate ☹");
+        } else {
+          alert(
+            "Thank you, " +
+              name +
+              "! We'll be in touch. Meanwhile, have lots of Chocolate! 😊"
+          );
+        }
+      }
+
+      let isDarkMode = true;
+
+      function updateTheme() {
+        let theme = document.body;
+        if (isDarkMode) {
+          theme.style.backgroundColor = "white";
+          theme.style.color = "black";
+          isDarkMode = false;
+        } else {
+          theme.style.backgroundColor = "rgb(15, 15, 15)";
+          theme.style.color = "white";
+          theme.style.color = "black";
+          isDarkMode = true;
+        }
+      }
+
+      let buyButton = document.querySelector("button");
+      buyButton.addEventListener("click", buy_chocolate);
+
+      let themeButton = document.querySelector("#themeButton");
+      themeButton.addEventListener("click", updateTheme);
+    </script>
+  </body>
+</html>

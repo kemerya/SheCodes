@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        background-color: #f5f5f5;
+        padding: 20px;
+        margin: 0;
+      }
+      div {
+        margin: 10px auto;
+      }
+      h1 {
+        font-size: 24px;
+        margin: 10px auto;
+        color: #885df1;
+      }
+      .forecast {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .forecast > div {
+        margin: 10px 0;
+        transition: all 200ms ease-in-out;
+      }
+      .forecast .temperature {
+        font-size: 20px;
+      }
+      .temperature1 {
+        font-size: 40px;
+        font-weight: normal;
+      }
+      .temperature1 span {
+        font-weight: bold;
+      }
+      .forecast .day {
+        font-size: 16px;
+        font-weight: bold;
+      }
+      .sun {
+        color: #ffd700;
+        font-size: 30px;
+      }
+      .hov {
+        transition: all 200ms ease-in-out;
+      }
+      .hov:hover {
+        background-color: #ffe8e8;
+        padding: 10px 100px;
+        margin: 20px auto;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+      button {
+        background-color: #885df1;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 40px;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all 200ms ease-in-out;
+      }
+      button:hover {
+        background-color: red;
+      }
+      .credit {
+        margin-top: 20px;
+        color: #666;
+        font-size: small;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="changeemoji"></div>
+    <h1>🌤️<br />Currently 21&deg; in Tokyo</h1>
+    <div class="temperature1">13&deg;<span>/23&deg;</span></div>
+    <div class="forecast">
+      <div class="hov">
+        <div class="cloud">🌧️<span class="day">Tomorrow</span></div>
+        <div class="temperature">10&deg;/22&deg;</div>
+      </div>
+      <div class="hov">
+        <div class="rain">🌥️<span class="day">Saturday</span></div>
+        <div class="temperature">15&deg;/17&deg;</div>
+      </div>
+      <div class="hov">
+        <div class="sunrise">☀️ <span class="day">Sunday</span></div>
+        <div class="temperature">25&deg;/28&deg;</div>
+      </div>
+    </div>
+    <button id="changeCityBtn">Change city</button>
+
+    <div class="credit">Coded by Kemerya Zeynu</div>
+
+    <script>
+      function updateHeading(newHeading) {
+        let h1 = document.querySelector("h1");
+        h1.innerHTML = newHeading;
+      }
+
+      function getTemperature() {
+        let temp = prompt("Enter the temperature in Celsius:");
+        return parseFloat(temp);
+      }
+
+      function changeCity() {
+        let city = prompt("Enter the city name:");
+        let temp = getTemperature();
+
+        if (!isNaN(temp)) {
+          if (temp <= 0) {
+            updateHeading(`☹ <br> Currently ${temp}°C in ${city}!`);
+          } else {
+            updateHeading(`😃<br> Currently ${temp}°C in ${city}!`);
+          }
+        } else {
+          alert("Invalid temperature entered. Please enter a valid number.");
+        }
+      }
+
+      let changeCityBtn = document.getElementById("changeCityBtn");
+      changeCityBtn.addEventListener("click", changeCity);
+    </script>
+  </body>
+</html>
