@@ -1,0 +1,62 @@
+main {
+  text-align: center;
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+}
+h1 {
+  margin-bottom: 0;
+  font-size: 34px;
+  line-height: 48px;
+  font-weight: 900;
+  color: #272044;
+}
+
+h2 {
+  color: #8064e9;
+  line-height: 48px;
+  font-weight: 900;
+
+  margin-top: 0;
+  font-size: 30px;
+  padding: 0 0 24px;
+}
+p {
+  text-align: center;
+  font-size: 18px;
+  line-height: 28px;
+  font-family: PT Mono, monospace;
+}
+header {
+  text-align: center;
+  font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+}
+span {
+  font-weight: bold;
+}
+.main-content {
+  text-align: center;
+}
+
+.joinNowButton {
+  border-radius: 25px;
+  border: 1px solid #8064e9;
+  background: #8064e9;
+  color: #fff;
+  font-size: 16px;
+  display: block;
+  margin: 60px auto;
+  line-height: 22px;
+  padding: 16px 24px;
+  text-decoration: none;
+  transition: all 200ms ease;
+  box-shadow: rgba(37, 39, 89, 0.08) 0px 8px 8px 0;
+}
+.joinNowButton:hover {
+  cursor: pointer;
+  background: #5e41a7;
+}
+.image {
+  display: block;
+  margin: 0 auto;
+  width: 700px;
+  border-radius: 20px;
+}

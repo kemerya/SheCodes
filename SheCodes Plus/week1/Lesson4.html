@@ -6,7 +6,7 @@
     <title>Document</title>
   </head>
   <style>
-    body {
+    main {
       text-align: center;
       font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
     }
@@ -33,6 +33,16 @@
       line-height: 28px;
       font-family: PT Mono, monospace;
     }
+    header {
+      text-align: center;
+      font-family: Cerebri Sans, Helvetica, Arial, sans-serif;
+    }
+    span {
+      font-weight: bold;
+    }
+    .main-content {
+      text-align: center;
+    }
 
     .joinNowButton {
       border-radius: 25px;
@@ -54,13 +64,22 @@
     }
   </style>
   <body>
-    <h1>👩‍💻 SheCodes is a coding Workshop for Women</h1>
-    <h2><strong>Access a new carrer in Technology</strong></h2>
+    <div class="main">
+      <!-- From this starter kit, include a div, span, section, header and footer element. The styling should not be impacted. -->
+      <header>
+        <h1>👩‍💻 SheCodes is a coding Workshop for Women</h1>
+        <h2><strong>Access a new carrer in Technology</strong></h2>
+      </header>
 
-    <p>
-      SheCodes teached coding, Design and managment skills to women
-      <br /><strong>Only 25 spots available!</strong>
-    </p>
-    <button class="joinNowButton">Join Now</button>
+      <section class="main-content">
+        <p>
+          SheCodes teached coding, Design and managment skills to women
+          <br /><span>Only 25 spots available!</span>
+        </p>
+      </section>
+      <footer>
+        <button class="joinNowButton">Join Now</button>
+      </footer>
+    </div>
   </body>
 </html>
